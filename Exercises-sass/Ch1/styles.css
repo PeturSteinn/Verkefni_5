@@ -14,10 +14,10 @@ header {
 
 .mypara {
   font-size: 1.5em;
-  border: 2px solid #0a0;
+  border: 2px solid #3f2;
   padding: 1em 2em; }
 
 .mypara:after {
-  content: " þetta er textastrengur æöð"; }
+  content: " Þetta er allt annar strengur xd"; }
 
 /*# sourceMappingURL=styles.css.map */

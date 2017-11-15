@@ -1,20 +1,15 @@
+@charset "UTF-8";
 /*
  * SASS Variables are defined with a $ character
  * and can have different kinds of data types: color, string, boolean, multi-value
  */
-
-$paracolor: #42f486;
-$signUp: 'Skráðu þig hér! ';
-$unusualFontSize: 2em;
-
 .mypara {
-  color: $paracolor;
-}
+  color: #42f486; }
 
 div p:nth-child(2)::before {
-  content: $signUp;
-}
+  content: "Skráðu þig hér! "; }
 
 .list1 {
-  font-size: $unusualFontSize;
-}
+  font-size: 2em; }
+
+/*# sourceMappingURL=var_styles.css.map */
