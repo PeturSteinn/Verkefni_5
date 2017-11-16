@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import "normalize.scss";
+
+$backroundColor: #505168;
+$wrapperColor: #EAEFD3;
+$mainFont: "Open Sans";
+
+body {
+  background-color: $backroundColor;
+  margin: 0 auto;
+  max-width: 60em;
+  font-family: $mainFont;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr;
+  grid-template: "header" "content" "footer";
+  background-color: $wrapperColor;
+  border-radius: 10px;
+  padding: .4em;
+}
+
+header {
+  grid-template-areas: header;
+}
+
+.content {
+  grid-template-areas: content;
+}
+
+footer {
+  grid-template-areas: footer;
+}
