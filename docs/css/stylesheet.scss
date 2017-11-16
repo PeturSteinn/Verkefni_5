@@ -17,19 +17,24 @@ body {
   grid-gap: 0;
   grid-template-columns: 1fr;
   grid-template: "header" "content" "footer";
+  padding: .3em;
   background-color: $wrapperColor;
-  border-radius: 10px;
-  padding: .4em;
 }
 
 header {
-  grid-template-areas: header;
+  grid-area: header;
+  text-align: center;
 }
 
 .content {
-  grid-template-areas: content;
+  grid-area: content;
+  h1 {
+    text-align: center;
+  }
 }
 
 footer {
-  grid-template-areas: footer;
+  grid-area: footer;
+  text-align: right;
+  color: lighten(#000, 60%);
 }
