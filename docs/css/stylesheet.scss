@@ -1,29 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import "normalize.scss";
 
-$backroundColor: #505168;
-$wrapperColor: #EAEFD3;
-$mainFont: "Open Sans";
+$bodyBackColor: #1e1e1e;
+$wrapperBackColor: #efefef;
+$wrapperTextColor: #010101;
+$introTextColor: #dcdcdc;
+$mainFont: monospace;
+@mixin makeGrid {
+  display: grid;
+  grid-gap: 0;
+}
+
+
 
 body {
-  background-color: $backroundColor;
+  background-color: $bodyBackColor;
   margin: 0 auto;
   max-width: 60em;
   font-family: $mainFont;
+  @include makeGrid;
+  grid-template-columns: 1fr;
+  grid-template: "intro" "wrapper";
 }
 
 .wrapper {
-  display: grid;
-  grid-gap: 0;
-  grid-template-columns: 1fr;
-  grid-template: "header" "content" "footer";
-  padding: .3em;
-  background-color: $wrapperColor;
+  padding: .5em;
+  background-color: $wrapperBackColor;
+  border-radius: 10px;
 }
 
-header {
-  grid-area: header;
+.intro {
+  grid-area: intro;
   text-align: center;
+  height: 760px;
+  color: $introTextColor;
+  h1 {
+    margin-top: 7em;
+    font-weight: 10;
+    text-decoration: underline;
+  }
 }
 
 .content {
@@ -37,4 +51,16 @@ footer {
   grid-area: footer;
   text-align: right;
   color: lighten(#000, 60%);
+}
+
+@media screen and (min-width: 48em) {
+  .row-1, .row-2, .row-3 {
+    @include makeGrid;
+    grid-template-columns: 1fr 1fr;
+    .col-1-1 h1, .col-2-1 h1, .col-3-1 h1,  {
+      text-align: right;
+      margin-right: .5em;
+      font-size: 1.4em;
+    }
+  }
 }
